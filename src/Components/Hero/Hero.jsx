@@ -13,7 +13,7 @@ import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 const Hero = () => {
   return (
     <div>
-        <div className='w-full h-80  grid grid-cols-2 gap-4 px-20  mt-3 mb-20'>
+        <div className='w-full h-80 md:grid md:grid-cols-2  md:gap-4  md:px-20  mt-3 mb-20'>
            <div className='col-span-1  items-center flex border-2 border-gray-200 rounded-md   shadow-lg '>
               <Swiper
                     effect={'flip'}
