@@ -1,7 +1,42 @@
 @import "tailwindcss";
 :root{
-    bg: #F5EFE6; 
+    
+    --swiper-theme-color: transparent;
+
 }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #f4ddb9!important; /* your theme color */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: black !important;
+}
+/* Kill swiper arrows completely */
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color:black !important;
+  stroke:transparent !important;
+  fill:black !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 10px;
+  height: 10px;
+}
+
+
+
+
+
 body{
      background-color: #F5EFE6;
      color: #2B2623;
