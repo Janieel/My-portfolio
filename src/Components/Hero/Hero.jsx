@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 
 
@@ -53,7 +54,7 @@ const Hero = () => {
                    <p className=' text-[1rem]    '>building responsive and interactive web applications</p>
                    <div className=' flex  items-center justify-center mt-6  gap-4'>
                     <button className=' w-30 h-15 shadow-lg border border-[#f4ddb9] '>view projects</button>
-                    <button className='w-30 h-15  border shadow-lg border-[#f4ddb9] '>contact me</button>
+                   <button className='w-30 h-15  border shadow-lg border-[#f4ddb9] '><a href='#connect'>contact me </a></button>
                    </div>
                  </div>
           
@@ -65,7 +66,7 @@ const Hero = () => {
                      <p className='xl:text-[1.5rem] md:text-[1rem]   '>building  responsive and interactive web applications</p>
                   <div className='w-65 flex items-center justify-between mt-6 '>
                     <button className=' w-30 h-15 shadow-lg border border-[#f4ddb9]'>view projects</button>
-                    <button className='w-30 h-15  border shadow-lg border-[#f4ddb9] '>contact me</button>
+                    <button className='w-30 h-15  border shadow-lg border-[#f4ddb9] '><a href='#connect'>contact me </a></button>
                   </div>
                 </div>
            

@@ -7,6 +7,7 @@ import Connect from '../../Components/Connect/Connect'
 const Home = () => {
   return (
     <div>
+        
         <Hero/>
         <About/>
         <Connect/>

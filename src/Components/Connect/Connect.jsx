@@ -1,31 +1,53 @@
 import React from 'react'
 import { IoLogoGithub, IoMail, IoPhonePortrait } from 'react-icons/io5'
+import { useForm, ValidationError } from "@formspree/react";
 
+ 
 const Connect = () => {
+   const [state, handleSubmit] = useForm("mreezyyv");
+
+  if (state.succeeded) {
+    return (
+      <p  className="text-center  text-[1.2rem] ">
+        Thanks for reaching out. will get back to you soon.
+      </p>
+    );
+  }
+
   return (
-    <div className='px-5 md:px-5 lg:px-5 '>
+    <div id='connect' className='  px-5 md:px-5 lg:px-5 '>
         <p className=' text-[2rem] px-10  text-center font-medium'>Get In Touch</p>
         <div className=' w-full flex-col  gap-5 md:grid grid-cols-2 mt-10  '>
             <div className='col-span-1 border-2   border-[#f4ddb9] rounded-md px-3 shadow-lg py-3 mb-10 md:mb-0'>
                <p className='mt-2 text-[1.5rem] font-semibold'>Send Me A Message</p>
-               <div className='mt-3 '>
-                   <p className='mb-2'>Your Name</p>
-                   <input className='w-[80%] lg:w-[60%] sm:w-[60%] md:w-full  h-8 shadow-sm outline-none border-gray-400 border indent-2' placeholder='enter your name'  type="text" />
-               </div>
-                <div className='mt-2 '>
-                   <p className='mb-2'>Your Email</p>
-                   <input className='w-[80%] sm:w-[60%] lg:w-[60%] md:w-full h-8 shadow-sm outline-none border-gray-400 border indent-2' placeholder='enter your email'  type="text" />
-               </div>
-               <div className='mt-2 '>
-                   <p className='mb-2'>Message</p>
-                   <textarea className='w-[80%] lg:w-[60%] sm:w-[60%] md:w-full shadow-sm  outline-none resize-none border-gray-400 border indent-2 h-20' 
-                    placeholder='type your message here..'  maxLength="300">
-                   </textarea>
-                   <div >
-                    <button className='bg-[#f4ddb9] px-4 py-2 rounded-md mt-2 '>Send Message</button>
-                  </div>
-                   
-               </div>
+               <form onSubmit={handleSubmit}>
+                    <div className='mt-3 '>
+                        <p className='mb-2'>Your Name</p>
+                        <input className='w-[80%] lg:w-[60%] sm:w-[60%] md:w-full  h-8 shadow-sm outline-none border-[#f4ddb9] border indent-2'
+                          placeholder='enter your name'  type="text"  name='name'  />
+                    </div>
+
+                      <div className='mt-2 '>
+                        <p className='mb-2'>Your Email</p>
+                        <input className='w-[80%] sm:w-[60%] lg:w-[60%] md:w-full h-8 shadow-sm outline-none border-[#f4ddb9] border indent-2' 
+                        placeholder='enter your email'  type="text" name='email' />
+                         <ValidationError  prefix="Email" field="email"   errors={state.errors} />  
+                    </div>
+                    <div className='mt-2 '>
+                        <p className='mb-2'>Message</p>
+                        <textarea className='w-[80%] lg:w-[60%] sm:w-[60%] md:w-full shadow-sm  outline-none resize-none border-[#f4ddb9] border indent-2 h-20' 
+                          placeholder='type your message here..' name='message'  maxLength="300">
+                        </textarea>
+                              <ValidationError  prefix="message" field="message"   errors={state.errors} /> 
+                        <div >
+                          <button type='submit' disabled={state.submitting}
+                           className='bg-[#f4ddb9] px-4 py-2 shadow-sm rounded-md mt-2 '>
+                              {state.submitting ? "Sending..." : "Send Message"}
+                          </button>
+                        </div>
+                        
+                    </div>
+               </form>
             </div>
             <div className=' col-span-1 border-2 border-[#f4ddb9] rounded-md px-3 shadow-lg py-3'>
                   <p className='mt-2 text-[1.5rem] font-semibold'>Contact Information</p>
@@ -33,7 +55,7 @@ const Connect = () => {
                     <div className='bg-[#f4ddb9] h-15 w-15 rounded-[50px] sm:ml-3 flex justify-center items-center'>
                        <IoMail style={{fontSize:"20px"}}/>
                     </div>
-                    <div className=' ml-2 sm:ml-5  bg-amber-500 '>
+                    <div className=' ml-2 sm:ml-5   '>
                        <p className='font-semibold text-[1rem]'>Email Address</p>
                         <p className='text-gray-400 mt-1'>miramondjane@gmail.com</p>
                     </div>

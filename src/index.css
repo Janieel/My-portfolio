@@ -38,7 +38,10 @@
 
 
 body{
-     background-color: #F5EFE6;
+     background-color: #9e9d9a;
      color: #2B2623;
      
+}
+html{
+  scroll-behavior: smooth;
 }
