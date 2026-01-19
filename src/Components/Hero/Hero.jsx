@@ -49,10 +49,10 @@ const Hero = () => {
 
                 {/* mobile */}
 
-                 <div  className=' sm:hidden mb-5 text-center   w-full bg-red-400 ' >
+                 <div  className=' sm:hidden mb-5 text-center   w-full ' >
                    <p className='  text-[2rem]   font-semibold '>Frontend Developer</p>
                    <p className=' text-[1rem]    '>building responsive and interactive web applications</p>
-                   <div className=' flex  items-center justify-center mt-6  gap-4 bg-amber-300'>
+                   <div className=' flex  items-center justify-center mt-6  gap-4 '>
                    <Link to="/project"> <button className=' w-30 h-15 shadow-lg border border-[#f4ddb9] '>view projects</button></Link>
                    <button className='w-30 h-15  border shadow-lg border-[#f4ddb9] '><a href='#connect'>contact me </a></button>
                    </div>
