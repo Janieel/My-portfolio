@@ -29,7 +29,7 @@ const About = () => {
                            <span className='text-[1.5rem] md:text-[2rem] mb-5 flex justify-center  font-medium '>
                                 ABOUT 
                            </span>
-                           <p >
+                           <p  className='sm:text-center sm:px-5 '>
                                Hi there! I'm Jane, a front-end developer who's passionate about building innovative web applications.
                                  What drives me is the opportunity to transform my passion into practical 
                                  solutions that address real-life challenges. I specialize in creating web apps
