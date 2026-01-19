@@ -4,11 +4,10 @@ const Footer = () => {
   return (
     <div>
         <div className='w-full  h-80 md:px-20  '>
-            <div className='bg-[#f0e3cd]  shadow-sm w-full h-60 px-10 md:px-50 flex justify-between  '>
+            <div className='bg-[#faf0df]  shadow-sm w-full h-60 px-10 md:px-50 flex justify-between  '>
                 <div >
                     <p className='font-medium text-[1.5rem] mt-5  '>Quick Link</p>
                      <p className='mt-2'>Home</p>
-                     <p className='mt-2'>About</p>
                      <p className='mt-2'>Projects</p>
                     <p className='mt-2'>About</p>
                     <p className='mt-2'>Contact</p>
@@ -28,7 +27,7 @@ const Footer = () => {
                     <p className='mt-2'>Abuja, Nigeria</p>
                 </div> */}
             </div>
-            <div className='bg-[#f0e3cd] border-t  h-20 w-full flex items-center justify-center '>
+            <div className='bg-[#faf0df] border-t  h-20 w-full flex items-center justify-center '>
                  <p>© 2026 Jane. All Rights Reserved.</p>
             </div>
         </div>

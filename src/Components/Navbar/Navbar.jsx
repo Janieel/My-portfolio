@@ -1,20 +1,27 @@
 import React, { useState } from 'react'
 import { IoMenuOutline } from 'react-icons/io5'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
+import logo from "../../assets/Icon/Logo.svg"
+
 
 const Navbar = () => {
    const [Dropdown,setDropdown]=useState(false)
   return (
     <div className='bg-[#f0e3cd] z-100 sticky top-0'>
         <div className='md:w-full  md:h-20 flex h-15 w-full   px-5 '>
-           <div className=' w-[50%] flex items-center
+           <div className=' w-[50%] flex items-center 
              md:w-[50%] md:flex  md:items-center'>
-               logo
+              <img src={logo} className=' h-[130px]' alt="" />
            </div>
             {/* small screen */}
-            <div className=' md:hidden w-[50%] flex justify-end items-center relative'>
+            <div className=' md:hidden w-[50%] flex justify-end items-center relative '>
+              
                 <IoMenuOutline style={{fontSize:"30px"}}
-                 onClick={()=>setDropdown(!Dropdown)}/>
+                   onClick={()=>setDropdown(!Dropdown)}
+                  
+                />
+
+              
             </div>
             {    Dropdown &&
                   <div data-aos="fade-left"

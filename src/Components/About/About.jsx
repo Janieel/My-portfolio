@@ -3,6 +3,8 @@ import SwiperCarousel from '../SwiperCarousel/Swiper'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Motion from '../Motion/Motion';
+
 
 
 
@@ -17,6 +19,7 @@ const About = () => {
   }, []);
   return (
     <div>
+          
           <div className=' lg:px-5 px-5 mt-5  py-10 md:py-0  xl:h-max '>
                <div className=' gap-4 mt-10   '>
                     <div className=' col-span-1   rounded-md px-3 '> 
@@ -37,14 +40,16 @@ const About = () => {
                     </div> 
                     <div >
                        
-                         <div className='col-span-1 h-80 md:h-90  rounded-md px-3 mt-10 sm:mt-20 '>
+                         <div className='col-span-1 h-80 md:h-90  rounded-md px-3 mt-10 sm:mt-20  '>
                                <p className=' text-[1.5rem] sm:text-[2rem]  font-medium sm:font-semibold flex mb-5 justify-center ' >Technical Skills</p>
-                               <div className='h-40 sm:h-40 md:h-70  pt-10 relative'
-                                    onMouseEnter={() => setIsHovered(true)}
-                                    onMouseLeave={() => setIsHovered(false)}
-                               
-                               >
-                                <SwiperCarousel />
+                               <div className='h-40 sm:h-40 md:h-70  pt-10 relative'>
+                                 
+                                <div className='flex justify-center'>
+                                     <Motion/>
+
+                                </div>
+                                
+                                 
                                 <p className='  text-[1rem] text-center mt-5 font-medium '>The tools I use to build clean, functional web projects.</p>
                                  
   

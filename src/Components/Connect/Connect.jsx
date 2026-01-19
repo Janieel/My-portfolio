@@ -57,7 +57,7 @@ const Connect = () => {
                     </div>
                     <div className=' ml-2 sm:ml-5   '>
                        <p className='font-semibold text-[1rem]'>Email Address</p>
-                        <p className='text-gray-400 mt-1'>miramondjane@gmail.com</p>
+                        <p className=' mt-1'>miramondjane@gmail.com</p>
                     </div>
                   </div>
                   {/* <div className='h-20 w-full  flex items-center '>
