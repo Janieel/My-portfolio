@@ -71,7 +71,7 @@ const Project = () => {
                   </Swiper>
                
                 <div className='col-span-1   mt-10 pt-5 px-5 sm:mt-0 bg-[#ebe9e5] text-black  '>
-                   <p className='text-2xl bg-red-500 text-center md:mt-5'> Landing Page Website </p>
+                   <p className='text-2xl  text-center md:mt-5'> Landing Page Website </p>
                     <p className='mt-5'>This project is a Landing Page built with React,
                         JavaScript, and Tailwind CSS. It focuses on delivering a clean,
                         intuitive user interface and a smooth user experience across all devices. 
