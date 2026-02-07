@@ -51,13 +51,13 @@ const Project = () => {
                         className=" w-full  "
                     >
                         <SwiperSlide>
-                            <div className=' h-100 pt-10  sm:px-0 md:px-0   w-full px-10   lg:px-15 xl:px-30'>
+                            <div className=' bg-white h-100 pt-10  sm:px-0 md:px-0   w-full px-10   lg:px-15 xl:px-35'>
                                 <img src={tip} className='h-[90%]  w-[100%]' alt="" />
                             </div>
                             
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className='bg-white h-100 pt-10 sm:px-0 md:px-0  w-full px-10  lg:px-15 xl:px-30'>
+                            <div className='bg-white h-100 pt-10 sm:px-0 md:px-0  w-full px-10  lg:px-15 xl:px-35'>
                                 <img src={pool} className='h-[90%] w-[100%]' alt="" />
                             </div>
                             
@@ -87,7 +87,7 @@ const Project = () => {
                                 <button className='bg-[#c9b5a0] h-[40px] w-[150px] rounded-[50px]'>Tailwind</button>
                            </div>
                         </div>
-                       <div className=' flex items-center py-5 gap-4 '>
+                       <div className=' flex items-center py-5 gap-4 justify-center '>
                          <a 
                             href="https://github.com/Janieel/Tip-Pool-landing-page " >
                            <button className=' bg-[#a09a9a] h-12 w-30 rounded-[10px] hover:bg-[#7a7272] '> Github </button>
