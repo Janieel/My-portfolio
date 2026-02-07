@@ -6,8 +6,8 @@ import 'swiper/css/pagination';
 import check from "../../assets/Pictures/Image2.png"
 import log from "../../assets/Pictures/Image3.png"
 import det from "../../assets/Pictures/Image4.png"
-import tip from "../../assets/Pictures/tip.png"
-import pool from "../../assets/Pictures/pool.png"
+import tip from "../../assets/Pictures/open.png"
+import pool from "../../assets/Pictures/how.png"
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -51,14 +51,14 @@ const Project = () => {
                         className=" w-full  "
                     >
                         <SwiperSlide>
-                            <div className=' bg-white h-100 pt-10  sm:px-0 md:px-0   w-full px-10   lg:px-15 xl:px-35'>
-                                <img src={tip} className='h-[90%]  w-[100%]' alt="" />
+                            <div className='  h-90  sm:px-0 md:px-0   w-full    lg:px-15 xl:px-35'>
+                                <img src={tip} className='h-[100%] object-contain  w-[100%]' alt="" />
                             </div>
                             
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className='bg-white h-100 pt-10 sm:px-0 md:px-0  w-full px-10  lg:px-15 xl:px-35'>
-                                <img src={pool} className='h-[90%] w-[100%]' alt="" />
+                            <div className=' h-90  sm:px-0 md:px-0  w-full  lg:px-15 xl:px-35'>
+                                <img src={pool} className='h-[100%] object-contain w-[100%]' alt="" />
                             </div>
                             
                         </SwiperSlide>
@@ -72,7 +72,7 @@ const Project = () => {
                
                 <div className='col-span-1   mt-10 pt-5 px-5 sm:mt-0 bg-[#ebe9e5] text-black  '>
                    <p className='text-2xl  text-center md:mt-5'> Landing Page Website </p>
-                    <p className='mt-5'>This project is a Landing Page built with React,
+                    <p className='mt-5 text-center'>This project is a Landing Page built with React,
                         JavaScript, and Tailwind CSS. It focuses on delivering a clean,
                         intuitive user interface and a smooth user experience across all devices. 
                         The application leverages reusable components and efficient state management to
