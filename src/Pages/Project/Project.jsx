@@ -52,13 +52,13 @@ const Project = () => {
                     >
                         <SwiperSlide>
                             <div className='  h-90  sm:px-0 md:px-0   w-full    lg:px-15 xl:px-35'>
-                                <img src={tip} className='h-[100%] object-contain  w-[100%]' alt="" />
+                                <img src={pool} className='h-[100%] object-contain  w-[100%]' alt="" />
                             </div>
                             
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className=' h-90  sm:px-0 md:px-0  w-full  lg:px-15 xl:px-35'>
-                                <img src={pool} className='h-[100%] object-contain w-[100%]' alt="" />
+                                <img src={tip} className='h-[100%] object-contain w-[100%]' alt="" />
                             </div>
                             
                         </SwiperSlide>
