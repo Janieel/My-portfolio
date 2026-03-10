@@ -31,9 +31,9 @@ const Navbar = () => {
                     
                          className='md:hidden absolute top-15 right-0 text-center  bg-[#e8e6e3] w-50 h-40' >
                        <Link to={'/'}><h2 className=' mt-3 hover:bg-[#876267] ' >Home</h2></Link>
-                      <h2 className='mt-3  hover:bg-[#876267]'>About</h2>
+               
                       <Link to={'/project'}><h2 className='mt-3  hover:bg-[#876267]'>Projects</h2></Link> 
-                      <h2 className='mt-3  hover:bg-[#876267]'>Contact</h2>
+                      
                  </div>
             }
            
@@ -41,9 +41,9 @@ const Navbar = () => {
            <div className=' w-[50%] hidden
             md:w-[50%] md:gap-5  md:flex  md:items-center md:justify-end md:mx-10'>
              <Link to={'/'}><h2>Home</h2></Link>
-              <h2>About</h2>
+         
               <Link to={'/project'}><h2>Projects</h2></Link> 
-              <h2>Contact</h2>
+        
            </div>
         </div>
     </div>
