@@ -7,6 +7,7 @@ import react from "../../assets/Pictures/Imagereact.png"
 import tw from "../../assets/Pictures/Imagetw.png"
 import bt from "../../assets/Pictures/Imagebt.png"
 import git from "../../assets/Pictures/Imagegit.png"
+import next from "../../assets/Pictures/Next.png"
 import { img } from "motion/react-client";
 
 const LoopingScroll = () => {
@@ -31,6 +32,9 @@ const LoopingScroll = () => {
        },
         { name:"GitHub",
          image: git
+       },
+         { name:"Next.js",
+         image: next
        },
       
       
