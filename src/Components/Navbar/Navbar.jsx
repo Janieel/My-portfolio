@@ -29,7 +29,7 @@ const Navbar = () => {
                         data-aos-offset="500"
                         data-aos-duration="500"
                     
-                         className='md:hidden absolute top-15 right-0 text-center  bg-[#e8e6e3] w-50 h-40' >
+                         className='md:hidden absolute top-15 right-0 text-center  bg-[#e8e6e3] w-50 h-20' >
                        <Link to={'/'}><h2 className=' mt-3 hover:bg-[#876267] ' >Home</h2></Link>
                
                       <Link to={'/project'}><h2 className='mt-3  hover:bg-[#876267]'>Projects</h2></Link> 
@@ -38,11 +38,11 @@ const Navbar = () => {
             }
            
             {/* tablet */}
-           <div className=' w-[50%] hidden
-            md:w-[50%] md:gap-5  md:flex  md:items-center md:justify-end md:mx-10'>
-             <Link to={'/'}><h2>Home</h2></Link>
+           <div className=' w-[50%] hidden  
+            md:w-[50%] lg:gap-5  md:flex  md:items-center md:justify-end'>
+             <Link to={'/'}><h2 className='hover:bg-[#876267] w-30 h-10  flex items-center justify-center'>Home</h2></Link>
          
-              <Link to={'/project'}><h2>Projects</h2></Link> 
+              <Link to={'/project'}><h2 className='hover:bg-[#876267] w-30 h-10  flex items-center justify-center'>Projects</h2></Link> 
         
            </div>
         </div>
