@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import { projectsData } from '../../Data/projectsData';
 import check from "../../assets/Pictures/Image2.png"
 import log from "../../assets/Pictures/Image3.png"
 import det from "../../assets/Pictures/Image4.png"
@@ -23,86 +24,89 @@ const Project = () => {
       progressCircle.current.style.setProperty('--progress', 1 - progress);
      progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
-  return (
-
-          
-    <div className='' >
-        <div className=' w-full    '>
-            <div className=' text-[2rem] font-medium   h-20 flex justify-center items-center '>Project</div>
-             <div className=' text-center px-5  '>
-                <p className='font-medium mb-2 text-[1.5rem] '>Featured projects</p>
-                 <p className='text-[1rem] text-[#dbbfbf]'>Highlighted project showing my frontend development skill</p>
-             </div>
-            <div className='  px-5 mt-10   mb-10 lg:px-0 sm:grid grid-cols-2  rounded-[10px] sm:bg-[#ebe9e5]  md:shadow-xl'>
-               
-                  <Swiper
-                        spaceBetween={30}
-                        centeredSlides={true}
-                        // autoplay={{
-                        // delay: 1500,
-                        // disableOnInteraction: false,
-                        // }}
-                        pagination={{
-                        clickable: true,
-                        }}
-                        navigation={true}
-                        modules={[Autoplay, Pagination,]}
-                        onAutoplayTimeLeft={onAutoplayTimeLeft}
-                        className=" w-full  "
-                    >
-                        <SwiperSlide>
-                            <div className='  h-90  sm:px-0 md:px-0   w-full    lg:px-15 xl:px-35'>
-                                <img src={pool} className='h-[100%] object-contain  w-[100%]' alt="" />
-                            </div>
-                            
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className=' h-90  sm:px-0 md:px-0  w-full  lg:px-15 xl:px-35'>
-                                <img src={tip} className='h-[100%] object-contain w-[100%]' alt="" />
-                            </div>
-                            
-                        </SwiperSlide>
-                       
-                    
-                      
-                        
-                       
-                  
-                  </Swiper>
-               
-                <div className='col-span-1   mt-10 pt-5 px-5 sm:mt-0 bg-[#ebe9e5] text-black  '>
-                   <p className='text-2xl  text-center md:mt-5'> Landing Page Website </p>
-                    <p className='mt-5 text-center'>This project is a Landing Page built with React,
-                        JavaScript, and Tailwind CSS. It focuses on delivering a clean,
-                        intuitive user interface and a smooth user experience across all devices. 
-                        The application leverages reusable components and efficient state management to
-                        ensure performance, scalability, and maintainability.
-                    </p>
-
-                        <div className='  hidden lg:block  md:text-center  md:mt-5 md:text-[1.5rem] font-medium'> <p>Tech Stack</p>
-                            
-                            <div className='md:mt-3  md:flex md:justify-center md:text-[1rem] md:items-center font-normal md:gap-4'>
-                                <button className='bg-[#c9b5a0] h-[40px] w-[120px] rounded-[50px]'>React</button>
-                                <button className='bg-[#c9b5a0] h-[40px] w-[152px] rounded-[50px]'>Javascript</button>
-                                <button className='bg-[#c9b5a0] h-[40px] w-[150px] rounded-[50px]'>Tailwind</button>
-                           </div>
-                        </div>
-                       <div className=' flex items-center py-5 gap-4 justify-center '>
-                         <a 
-                            href="https://github.com/Janieel/Tip-Pool-landing-page " >
-                           <button className=' bg-[#a09a9a] h-12 w-30 rounded-[10px] hover:bg-[#7a7272] '> Github </button>
-                        </a>  
-                          <a href="https://tip-pool-page.vercel.app/">
-                        <button className='  bg-[#a09a9a] h-12 w-30 rounded-[10px]  hover:bg-[#7a7272]  '> Live demo </button>
-                       </a> 
-                     </div>
-                </div>
-              
-            </div>
-            
+    
+   return (
+    <div className="">
+      <div className="w-full">
+        <div className="text-[2rem] font-medium h-20 flex justify-center items-center">
+          Project
         </div>
+        <div className="text-center px-5">
+          <p className="font-medium mb-2 text-[1.5rem]">Featured projects</p>
+          <p className="text-[1rem] sm:text-[1.2rem] text-[#dbbfbf]">
+            Highlighted project showing my frontend development skill
+          </p>
+        </div>
+
+        {projectsData.map((project) => (
+          <div
+            key={project.id}
+            className=" mt-10 mb-10 lg:px-0 lg:grid grid-cols-2 rounded-[10px] mx-5 md:mx-20  md:shadow-xl border bg-[#ebe9e5] border-[#ebe9e5]"
+          >
+            {/* Image Swiper */}
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              pagination={{ clickable: true }}
+              navigation={true}
+              modules={[Autoplay, Pagination,]}
+              onAutoplayTimeLeft={onAutoplayTimeLeft}
+              className="w-full bg-[#C9C5BE] rounded-bl-[10px] rounded-tl-[10px]"
+            >
+              {project.images.map((img, idx) => (
+                <SwiperSlide key={idx}>
+                  
+                  <div className=" h-90  lg:h-90  w-full p-2 sm:p-10  md:p-10  lg:p-5 xl:px-15 shadow-xs" >
+                    <img
+                       src={img} 
+                      className="h-[100%] object-contain w-[100%] "
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            {/* Project Details */}
+            <div className="col-span-1   pt-5 px-10  md:mt-0  text-black rounded-br-[10px] rounded-tr-[10px] 
+             ">
+              <p className="text-2xl text-center md:mt-5 ">{project.title}</p>
+              <p className="mt-5 text-center ">{project.description}</p>
+
+              {/* Tech Stack */}
+              <div className="hidden lg:block md:text-center md:mt-5 md:text-[1.5rem] font-medium">
+                <p>Tech Stack</p>
+                <div className="md:mt-3 md:flex md:justify-center md:text-[1rem] md:items-center font-normal md:gap-4 ">
+                  {project.techStack.map((tech, idx) => (
+                    <button
+                      key={idx}
+                      className="bg-[#876267] h-[40px] w-[120px] rounded-[10px] px-4"
+                    >
+                      {tech}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Links */}
+              <div className="flex items-center py-5 gap-4 justify-center">
+                <a href={project.links.github}>
+                  <button className="bg-[#b8af76] h-10 w-30 rounded-[10px] hover:bg-[#d6d4c4]">
+                    Github
+                  </button>
+                </a>
+                <a href={project.links.liveDemo}>
+                  <button className="bg-[#b8af76] h-10 w-30 rounded-[10px] hover:bg-[#d6d4c4]">
+                    Live demo
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
+
 
 export default Project

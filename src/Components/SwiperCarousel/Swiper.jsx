@@ -81,6 +81,7 @@ export default function App() {
                 <p className='  text-center text-[1rem] sm:text-[1.5rem] font-semibold  '>Bootstrap</p>
             </div>
         </SwiperSlide>
+        
       </Swiper>
        </>
   );
