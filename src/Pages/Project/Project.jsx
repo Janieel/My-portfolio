@@ -41,7 +41,7 @@ const Project = () => {
         {projectsData.map((project) => (
           <div
             key={project.id}
-            className=" mt-10 mb-10 lg:px-0 lg:grid grid-cols-2 rounded-[10px] mx-5 md:mx-20  md:shadow-xl border bg-[#ebe9e5] border-[#ebe9e5]"
+            className=" mt-10 mb-10 lg:px-0 lg:grid grid-cols-2 rounded-[10px] mx-5 md:mx-20  md:shadow-xl border  border-[#161515]"
           >
             {/* Image Swiper */}
             <Swiper
@@ -51,12 +51,12 @@ const Project = () => {
               navigation={true}
               modules={[Autoplay, Pagination,]}
               onAutoplayTimeLeft={onAutoplayTimeLeft}
-              className="w-full bg-[#C9C5BE] rounded-bl-[10px] rounded-tl-[10px]"
+              className="w-full bg-[#161515] border border-[#161515] rounded-t-[10px] md:rounded-t-[0px]  md:rounded-tl-[10px] md:rounded-bl-[10px]  "
             >
               {project.images.map((img, idx) => (
                 <SwiperSlide key={idx}>
                   
-                  <div className=" h-90  lg:h-90  w-full p-2 sm:p-10  md:p-10  lg:p-5 xl:px-15 shadow-xs" >
+                  <div className="h-90 sm:h-90 lg:h-90  w-full px-2 sm:p-10  md:p-10  lg:p-5 xl:px-15 shadow-xs" >
                     <img
                        src={img} 
                       className="h-[100%] object-contain w-[100%] "
@@ -67,7 +67,7 @@ const Project = () => {
             </Swiper>
 
             {/* Project Details */}
-            <div className="col-span-1   pt-5 px-10  md:mt-0  text-black rounded-br-[10px] rounded-tr-[10px] 
+            <div className="col-span-1  bg-[#ebe9e5]  pt-5 px-10  md:mt-0  text-black 
              ">
               <p className="text-2xl text-center md:mt-5 ">{project.title}</p>
               <p className="mt-5 text-center ">{project.description}</p>
